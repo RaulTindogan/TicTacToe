@@ -318,7 +318,8 @@ main h1 {
 }
 
 .confirm-btn {
-    width: 50%;
+    width: 150px;
+    height: 100px
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
