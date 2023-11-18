@@ -323,6 +323,8 @@ yesBtn.addEventListener('click', ()=>{
 noBtn.addEventListener('click', ()=>{
     bgMusic.pause()
     bgMusic.currentTime = 0
+    speaker1.style.display = 'block'
+    speaker2.style.display = 'none'
     speakerContainer.style.display = 'none'
     player1Score = 0
     player2Score = 0
