@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="speaker-container" id="speaker">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" id="speaker1" class="speaker">
+                <path d="M533.6 32.5C598.5 85.3 640 165.8 640 256s-41.5 170.8-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" id="speaker2" class="speaker">
+                <path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM425 167l55 55 55-55c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-55 55 55 55c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-55-55-55 55c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l55-55-55-55c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/>
+            </svg>
+        </div>
+        <main>
+            <h1>Tic Tac Toe</h1>
+            <div class="playerScores">
+                <h3 id="player1Score"></h3>
+                <h3 id="player2Score"></h3>
+                <h3 id="drawScore"></h3>
+            </div>
+            <div class="board" id="board"></div>
+        </main>
+        <div id="modal">
+            <div class="start-container">
+                <div class="start" id="start">
+                    <button id="play-btn" class="btn">PLAY</button>
+                </div>
+                <div class="playerInfo" id="playerInfo">
+                    <div class="forPlayer1 players-container" id="container-for-player1">
+                        <label for="p1Name">Player1 Name</label>
+                        <input type="text" id="p1Name">
+                    </div>
+                    <div class="forPlayer2 players-container" id="container-for-player2">
+                        <label for="p2Name">Player2 Name</label>
+                        <input type="text" id="p2Name">
+                    </div>
+                    <div class="pieceContainer">
+                        <h2>Choose Your Piece</h2>
+                        <div class="pieceHolder" id="pieceHolder">
+                                <div class="pieceTile"><img src="assets/brook-san.png" alt="brook-san" class="playerPiece" id="piece1"></div>
+                                <div class="pieceTile"><img src="assets/chopper-san.png" alt="chopper-san" class="playerPiece" id="piece2"></div>
+                                <div class="pieceTile"><img src="assets/franky-san.png" alt="franky-san.png" class="playerPiece" id="piece3"></div>
+                                <div class="pieceTile"><img src="assets/luffy-san.png" alt="luffy-san" class="playerPiece" id="piece4"></div>
+                                <div class="pieceTile"><img src="assets/nami-san.png" alt="nami-san" class="playerPiece" id="piece5"></div>
+                                <div class="pieceTile"><img src="assets/robin-san.png" alt="robin-san" class="playerPiece" id="piece6"></div>
+                                <div class="pieceTile"><img src="assets/sanji-san.png" alt="sanji-san.png" class="playerPiece" id="piece7"></div>
+                                <div class="pieceTile"><img src="assets/usopp-san.png" alt="usopp-san" class="playerPiece" id="piece8"></div>
+                                <div class="pieceTile"><img src="assets/zoro-san.png" alt="zoro-san" class="playerPiece" id="piece9"></div>  
+                        </div>
+                        <button id="enter" class="btn">ENTER</button>
+                    </div>
+                </div>
+                <div id="confirmInfo-container" class="modal-containers">
+                    <h2 id="playerName"></h2>
+                    <div id="playerPiece"></div>
+                    <div class="confirm-buttons">
+                        <button id="confirmCreds" class="confirm-btn btn btn">CONFIRM</button>
+                        <button id="cancel" class="confirm-btn btn btn">CANCEL</button>
+                    </div>
+                </div> 
+            </div>    
+            <div id="error-container" class="modal-containers">
+                <h2 id="error"></h2>
+                <button id="ok" class="btn">OK</button>
+            </div>
+            <div id="rematch-container" class="modal-containers">
+                <h2 id="winner-name"></h2>
+                <div id="winner-piece"></div>
+                <h2>Do Want a Rematch?</h2>
+                <div class="rematch-buttons">
+                    <button id="yes" class="rematch-btn btn">YES</button>
+                    <button id="no" class="rematch-btn btn">NO</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <script src="app.js" defer></script>
+</body>
+</html>
